@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local and Global Parameters</h1>
+    <button type="button" onclick="myfunction()">Click here to get the answer</button>
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <p id="id3"></p>
+    <script>
+        var n1=10   //global
+        function myfunction(){
+        var n2=20   //local
+        sum= n1+n2
+        document.getElementById("id1").innerHTML="sum: " +sum
+        document.getElementById("id3").innerHTML="n2: "+n2    // not work
+        }
+        document.getElementById("id2").innerHTML="n1: "+n1
+    </script>
+</body>
+</html>
