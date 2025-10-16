@@ -6,14 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="fun1(20)">Click here</button>
     <script>
-        function fun1(x,y){
-            if(y===undefined){
-                y=10
-            }
-            document.write(x*y)
-        }
+        var r=function(x,y){ return x-y}
+        document.write("Result:" ,r(10,5))
     </script>
 </body>
 </html>

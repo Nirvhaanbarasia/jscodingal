@@ -6,27 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Variable</h1>
+    <h1>Local and Global Parameters</h1>
+    <button type="button" onclick="myfunction()">Click here to get the answer</button>
     <p id="id1"></p>
     <p id="id2"></p>
-    <p id="sum"></p>
-    <p id="sub"></p>
-    <p id="mul"></p>
-    <p id="div"></p>
+    <p id="id3"></p>
     <script>
-        var x=10;
-        var y=20;
-        var sum=x+y
-        var sub=x-y
-        var mul=x*y
-        var div=x/y
-        document.getElementById("id1").innerHTML="Num1: " +x;
-        document.getElementById("id2").innerHTML="Num1: " +y;
-        document.getElementById("sum").innerHTML="Addition: " +sum;
-        document.getElementById("sub").innerHTML="Subraction: " +sub;
-        document.getElementById("mul").innerHTML="Multiplication: " +mul;
-        document.getElementById("div").innerHTML="Division: " +div
+        var n1=10   //global
+        function myfunction(){
+        var n2=20   //local
+        sum= n1+n2
+        document.getElementById("id1").innerHTML="sum: " +sum
+        document.getElementById("id3").innerHTML="n2: "+n2    // not work
+        }
+        document.getElementById("id2").innerHTML="n1: "+n1
     </script>
 </body>
-
 </html>
